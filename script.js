@@ -11,9 +11,12 @@ document.addEventListener("DOMContentLoaded", function(){
         button.addEventListener("click",function(){
             //if statment that checks the attribute of the data type to see whtas its value is and if its 'submit' it dsiplays an alert!
             //this. refers to the button that was just clicked!
-            if(this.getAttribute("data-type") === "submit"){
+            if(this.getAttribute("data-type")=== "submit"){
                 alert("you clicked submit");
-            }else{
+            }else if(this.getAttribute("data-type")==="button"){
+                alert("You pressed the 'Next' Button!");
+            }
+            else{
                 let normalButton = this.getAttribute("data-type");
             }
         })
@@ -21,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 })
 
-let submitted = document.getElementById("sub");
-submitted.addEventListener('submit',submitAnswer );
+let myArray = ["question1","Question2", "Question3", "Question4"];
+    let arraylength = myArray.length;
+    for(i=0;i<arrayLength;i++){
+        console.log('your question is'+myArray[i]);
+    }
 
-function submitAnswer(event){
-    console.log("you pressed the submit button!");
-}
+    let myArray2 = ["answer1", "answer2","answer3", "answer4","answer5", "answer6"]
