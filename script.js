@@ -1,7 +1,7 @@
 //Adds a eventListener to main document elements,It will listen for the DOM Content to be loaded then it will execute.
 // you should wait for the DOM to finish loading elements, otherwise you could be targeting elements that havent yet loaded! 
 document.addEventListener("DOMContentLoaded", function(){
-
+    
     //byTagname is used to get all the buttons created in HTML
     let buttons = document.getElementsByTagName("button");
 
@@ -12,15 +12,21 @@ document.addEventListener("DOMContentLoaded", function(){
             //if statment that checks the attribute of the data type to see whtas its value is and if its 'submit' it dsiplays an alert!
             //this. refers to the button that was just clicked!
             if(this.getAttribute("data-type")=== "submit"){
-                alert("you clicked submit");
-            }else if(this.getAttribute("data-type")==="button"){
+                createNew(); 
+            }
+            else if(this.getAttribute("data-type")==="button"){
                 alert("You pressed the 'Next' Button!");
             }
             else{
                 let normalButton = this.getAttribute("data-type");
             }
         })
-
+        //This function will display the image that is previously blocked by css rules when the submit button is pressed.
+        function createNew(){
+            document.getElementById('imgsetting')
+            .style.display = "block";
+        }
+        
     }
 })
 
