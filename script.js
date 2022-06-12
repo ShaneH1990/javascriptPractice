@@ -13,10 +13,9 @@ document.addEventListener("DOMContentLoaded", function(){
             //this. refers to the button that was just clicked!
             if(this.getAttribute("data-type")=== "submit"){
                 createNew(); 
-                
-            }
-            else if(this.getAttribute("data-type")==="button"){
-               alert("You pressed the 'Next' Button!");
+            }else if(this.getAttribute("data-type")=== "button"){
+               helloThere();
+                //alert("You pressed the 'Next' Button!");
            }
             else{
                 let normalButton = this.getAttribute("data-type");
@@ -29,12 +28,18 @@ document.addEventListener("DOMContentLoaded", function(){
            
         }
 
-        let imageArray = ["rock.jpg", "scissor.jpg","paper.jpg", "spock.jpg","lizard"];
-        let imageLength = imageArray.length;
-
-        function randomiseImg(){
-            let randompic = Math.floor(Math.random() *imageLength);
+        function helloThere(){
+            alert("hello there!");
         }
+       // let playerArray = ["rock.jpg", "scissor.jpg","paper.jpg", "spock.jpg","lizard.jpg"];
+       // let playerLength = imageArray.length;
+
+        //let computerArray =["rock.jpg", "scissor.jpg", "paper.jpg", "spock.jpg", "lizard.jpg"];
+        //let computerLength = computerArray.length;
+
+        //function randomiseImg(){
+        //    let randompic = Math.floor(Math.random() *imageLength);
+        //}
         
     }
 })
